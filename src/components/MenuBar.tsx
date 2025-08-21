@@ -11,6 +11,7 @@ import {
   List,
   ListOrdered,
   Strikethrough,
+  QuoteIcon,
 } from "lucide-react";
 import { Editor } from "@tiptap/react";
 import { Toggle } from "./ui/toggle";
@@ -78,6 +79,11 @@ const MenuBar: React.FC<IMenuBarProps> = ({ editor }) => {
       icon: <ListOrdered className="size-4" />,
       onClick: () => editor.chain().focus().toggleOrderedList().run(),
       preesed: editor.isActive("orderedList"),
+    },
+    {
+      icon: <QuoteIcon className="size-4" />,
+      onClick: () => editor.chain().focus().toggleBlockquote().run(),
+      preesed: editor.isActive("blockquote"),
     },
     {
       icon: <Highlighter className="size-4" />,
