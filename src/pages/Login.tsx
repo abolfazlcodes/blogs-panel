@@ -1,3 +1,7 @@
+import Button from "@/components/Button";
+import Input from "@/components/Input";
+import InputLabel from "@/components/InputLabel";
+
 const LoginPage = () => {
   return (
     <main className="w-full  h-svh flex items-center justify-center p-4 py-10 bg-green-100">
@@ -5,7 +9,7 @@ const LoginPage = () => {
         <header className="flex flex-col items-center justify-center gap-y-2">
           <figure className="relative w-20 h-20">
             <img
-              src="../../public/logo.png"
+              src="/logo.png"
               className="absolute w-full h-full object-cover"
             />
           </figure>
@@ -17,22 +21,17 @@ const LoginPage = () => {
 
         <form className="flex flex-col gap-y-4 px-4">
           <div className="flex flex-col gap-y-2">
-            <label>Email: </label>
-            <input type="email" placeholder="johndoe@gmail.com" />
+            <InputLabel>Email: </InputLabel>
+            <Input type="email" placeholder="johndoe@gmail.com" />
           </div>
 
           <div className="flex flex-col gap-y-2">
-            <label>Password: </label>
-            <input type="password" placeholder="password here" />
+            <InputLabel>Password: </InputLabel>
+            <Input type="password" placeholder="password here" />
           </div>
 
           <div className="w-full mt-10">
-            <button
-              type="submit"
-              className="bg-green-400 cursor-pointer w-full py-2 rounded-lg text-white font-bold font-mono"
-            >
-              Login
-            </button>
+            <Button type="submit">Login</Button>
           </div>
         </form>
       </article>

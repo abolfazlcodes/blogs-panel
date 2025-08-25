@@ -9,7 +9,7 @@ const HeaderNavigation = () => {
         className={"block w-14 rounded-full overflow-hidden h-14 relative"}
       >
         <img
-          src="../../public/logo.png"
+          src="/logo.png"
           className="w-full h-full absolute object-cover object-center"
         />
       </NavLink>
